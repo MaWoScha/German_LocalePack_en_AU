@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  German
+ * @package   German_LocalePack
+ * @authors   MaWoScha <mawoscha@siempro.co, http://www.siempro.co/>
+ * @developer MaWoScha <mawoscha@siempro.co, http://www.siempro.co/>
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <German_LocalePackAu>
+            <version>0.2.0</version>
+            <locale>en_AU</locale>
+            <title>English (Australia) Language Pack</title>
+            <link_git>https://github.com/MaWoScha/German_LocalePack_en_AU</link_git>
+            <link_mage></link_mage>
+        </German_LocalePackAu>
+    </modules>
+
+    <global>
+        <models>
+            <localepackau>
+                <class>German_LocalePackAu_Model</class>
+            </localepackau>
+        </models>
+        <helpers>
+            <localepackau>
+                <class>German_LocalePackAu_Helper</class>
+            </localepackau>
+        </helpers>
+        <blocks>
+            <localepackau>
+                <class>German_LocalePackAu_Block</class>
+            </localepackau>
+        </blocks>
+        <events>
+            <adminhtml_controller_action_predispatch_start>
+                <observers>
+                    <localepackau>
+                        <class>localepackau/observer</class>
+                        <method>adminhtmlControllerActionPredispatchStart</method>
+                    </localepackau>
+                </observers>
+            </adminhtml_controller_action_predispatch_start>
+        </events>
+    </global>
+	
+    <default>
+        <localepackau>
+             <notification>
+                <url>https://github.com/MaWoScha/German_LocalePack_en_AU</url>
+            </notification>
+        </localepackau>
+        <magesetup>
+            <default_country>AU</default_country>
+        </magesetup>
+    </default>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <localepackau>
+                    <files>
+                    	<default>localepackau.xml</default>
+                    </files>
+                </localepackau>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <German_LocalePackAu>
+                    <files>
+                        <localepackau>German_LocaleAu.csv</localepackau>
+                        <default>German_LocaleEn.csv</default>
+                    </files>
+                </German_LocalePackAu>
+            </modules>
+        </translate>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children> <!--
+                                        <localepacks translate="title" module="localepackau">
+                                            <title>Language Packs</title>
+                                    		<children> -->
+                                        		<localepackau translate="title" module="localepackau">
+                                            		<title>English (Australia) Language Pack</title>
+                                        		</localepackau> <!--
+                                    		</children>
+                                        </localepacks> -->
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+</config>
