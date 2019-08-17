@@ -84,6 +84,7 @@ app/locale/en_AU/Mage_Shipping.csv app/locale/en_AU/Mage_Shipping.csv
 app/locale/en_AU/Mage_Sitemap.csv app/locale/en_AU/Mage_Sitemap.csv
 app/locale/en_AU/Mage_Tag.csv app/locale/en_AU/Mage_Tag.csv
 app/locale/en_AU/Mage_Tax.csv app/locale/en_AU/Mage_Tax.csv
+app/locale/en_AU/Mage_Uploader.csv app/locale/en_AU/Mage_Uploader.csv
 app/locale/en_AU/Mage_Usa.csv app/locale/en_AU/Mage_Usa.csv
 app/locale/en_AU/Mage_Weee.csv app/locale/en_AU/Mage_Weee.csv
 app/locale/en_AU/Mage_Widget.csv app/locale/en_AU/Mage_Widget.csv
